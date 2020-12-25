@@ -109,7 +109,7 @@ if __name__ == '__main__':
     s_time = datetime.datetime.now()
     print("start:", s_time)
 
-    for id in range(1):
+    for id in range(12):
         createDataset(id, data_num=10000)
         print("finish id-{}:".format(id), datetime.datetime.now())
 

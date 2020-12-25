@@ -78,7 +78,7 @@ if __name__ == '__main__':
 
     draw_util.drawMap(lineSegments)
 
-    points = 6.5 * np.random.rand(10000, 2) -3.25
+    points = 6.5 * np.random.rand(10000*12, 2) -3.25
     print(points.shape)
 
     detect_points = detect_collision(points)
@@ -89,9 +89,9 @@ if __name__ == '__main__':
 
     draw_util.update()
 
-    # draw_util.draw_points(detect_points)
-    draw_util.draw_circles(detect_points, psize=0.25)
-    draw_util.draw_circles(np.zeros((1, 2)), psize=0.25, color='blue')
+    draw_util.draw_points(detect_points)
+    # draw_util.draw_circles(detect_points, psize=0.25)
+    # draw_util.draw_circles(np.zeros((1, 2)), psize=0.25, color='blue')
 
     draw_util.update()
     draw_util.save("test.png")
