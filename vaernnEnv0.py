@@ -80,7 +80,7 @@ class vaernnEnv0(gym.Env):
     def observe(self):
         return self.sim.observe(self.lidar)
 
-    def observe_env(self, bullet_lidar, x, y, yaw):
+    def observe_env(self, x, y, yaw):
         return self.sim.observe_env(self.lidar, x, y, yaw)
 
     def get_reward(self):

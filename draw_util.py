@@ -41,9 +41,9 @@ class DrawUtil:
         p = points.reshape((-1, 2))
         self.ax.scatter(p[:,0], p[:,1], s=psize**2, c='none', edgecolors=color, marker=marker, alpha=alpha)
 
-    def draw_lines(self, points, psize=1, color='red', linestyle='solid'):
+    def draw_lines(self, points, psize=1, color='red', linestyle='solid', alpha=1):
         p = points.reshape((-1, 2))
-        self.ax.plot(p[:,0], p[:,1], ms=psize, c=color, marker="o", linestyle=linestyle)
+        self.ax.plot(p[:,0], p[:,1], ms=psize, c=color, marker="o", linestyle=linestyle, alpha=alpha)
 
     def drawMap(self, lineSegments, color='green', linewidth=1):
         for points in lineSegments:
